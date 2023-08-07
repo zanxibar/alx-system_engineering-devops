@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -not -name | wc -l
+count=$(find . -mindepth 1 -maxdepth 1 -type d -name '.*' -o -name '*' | wc -l); echo "Number of directories and sub-directories: $count"
